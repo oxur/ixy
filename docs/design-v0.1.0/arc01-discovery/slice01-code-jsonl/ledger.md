@@ -36,6 +36,7 @@ domain._
 
 ## Closure
 
-Closed at commit <pending operator gate> on 2026-06-30. Verified by: CDC (pending).
+Closed at commit <pending operator gate> on 2026-06-30. Verified by: CDC (`cdc-verification.md`, 2026-06-30).
 Rows: 10. Done: 10. Deferred: 0. No-op: 0.
-Evidence strength: all rows `attested` (CC) — awaiting CDC `reproduced` pass.
+Evidence strength: F-1 / F-7 / F-8 / F-10 **reproduced** by CDC (independent: operator inventory + mounted artifact); F-2–F-6 / F-9 **attested** (consistency-checked — full re-run blocked by trust-domain split; needs fresh CC context or operator).
+CDC gate: **slice01 CLOSED**; arc ledger A-1 → done.
