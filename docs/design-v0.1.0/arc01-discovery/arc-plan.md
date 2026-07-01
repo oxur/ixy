@@ -39,7 +39,7 @@ arc scale, never inherited._
 | ID | Criterion | Verify | Significance | Origin | Status | Evidence | Notes |
 |----|-----------|--------|--------------|--------|--------|----------|-------|
 | A-1 | slice01 (code-jsonl) closed cleanly | ptr: slice01 cdc-verification | correctness | arc-plan | done | slice01/cdc-verification.md — gated closed 2026-06-30 | attested |
-| A-2 | slice02 (desktop-export) closed cleanly | ptr: slice02 cdc-verification | correctness | arc-plan | open | | attested |
+| A-2 | slice02 (desktop-export) closed cleanly | ptr: slice02 cdc-verification | correctness | arc-plan | done | slice02/cdc-verification.md — gated closed 2026-06-30 (all 10 rows reproduced) | attested |
 | A-3 | slice03 (corpus-map) closed cleanly | ptr: slice03 cdc-verification | correctness | arc-plan | open | | attested |
 | A-4 | corpus map documents BOTH sources' record schemas + content-block shapes | read map; cross-check against slice findings | serious | arc-plan | open | | reproduce at arc scale |
 | A-5 | every DoD provenance dimension (account/machine/model/time/project/session) traces to a concrete field in ≥1 source | walk each dimension → field in the map | serious | arc-plan | open | | reproduce at arc scale |
