@@ -1,0 +1,25 @@
+# Virtual workspace manifest — no root package; members are the real crates.
+# First Rust in the repo (arc02·slice01). Adds crates as arcs need them.
+[workspace]
+resolver = "2"
+members = ["crates/ixy-core"]
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.85"
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/oxur/ixy"
+authors = ["Duncan McGreggor"]
+
+[workspace.dependencies]
+thiserror = "2"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+# clippy posture: warn on the standard + pedantic groups; CI runs
+# `cargo clippy -- -D warnings`, turning every one of these into a hard error.
+# `priority = -1` lets individual lint overrides win over the group setting.
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }

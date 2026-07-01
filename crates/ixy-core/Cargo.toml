@@ -1,0 +1,15 @@
+[package]
+name = "ixy-core"
+version = "0.1.0"
+description = "Normalized record model for the ixy conversation corpus (Claude Code + Claude Desktop)."
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+
+[lints]
+workspace = true
