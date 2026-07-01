@@ -44,7 +44,12 @@ repo root._
 
 ## Closure
 
-Closed at commit <pending operator gate> on 2026-06-30. Verified by: CDC (pending).
+**Closed 2026-06-30.** Verified by: CDC (`cdc-verification.md`) — structure + invariants
+reproduced from source; **cargo gates reproduced by operator run (1.85+): build ✓, test ✓
+(7 unit + 2 doctest), clippy `--all-targets -D warnings` (pedantic) ✓.** `fmt --check`
+taken on CC attestation — the operator paste's final command was typo'd (`--checkk`) and
+its output not shown, so fmt was not independently reproduced (formatting-only; trivially
+re-runnable).
 Rows: 10. Done: 10. Deferred: 0. No-op: 0.
-Evidence strength: all rows `attested` (CC) — awaiting CDC/CI `reproduced` pass
-(`cargo build`/`test`/`clippy -D warnings`/`fmt --check` on a 1.85+ toolchain).
+Evidence strength: **N-1…N-10 reproduced** (structure/invariants by CDC; build/test/clippy
+by operator run) — the sole exception is `fmt --check`, `attested`. **slice01 CLOSED; B-1 → done.**
