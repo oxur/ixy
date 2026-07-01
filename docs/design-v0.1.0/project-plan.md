@@ -71,10 +71,10 @@ Per *plan late, plan deep*, only the active arc is detailed (see
 
 ## Current status
 
-- **Active:** arc01 — discovery. Slice01 (Code JSONL) ready for CC; slice02
-  (Desktop export) blocked on an export download; slice03 (corpus map) blocked
-  on 01+02.
-- **Closed:** none.
+- **Active:** arc01 — discovery, **proposed-closed pending independent gate**. All
+  three slices closed (slice01 CC-verified, slice02 CC-verified, slice03 doer-closed);
+  `arc01-discovery/corpus-map.md` delivered; arc `closing-report.md` written.
+- **Closed:** none yet (arc01 awaits its gate → then P-1 done, arc02 activates).
 - **Not yet planned in detail:** arc02–arc06.
 
 ## Project ledger
@@ -85,7 +85,7 @@ closes (per-row walk) in the project `closing-report.md`._
 
 | ID | Criterion | Verify | Significance | Origin | Status | Evidence | Notes |
 |----|-----------|--------|--------------|--------|--------|----------|-------|
-| P-1 | arc01 discovery closed + composed | ptr: arc01 closing-report | correctness | project-plan | open | | attested |
+| P-1 | arc01 discovery closed + composed | ptr: arc01 closing-report | correctness | project-plan | open | proposed: `arc01-discovery/closing-report.md`; composition A-4/5/6 reproduced (`corpus-map.md`); independent gate pending | → done at arc01 gate |
 | P-2 | arc02 classification closed + composed | ptr: arc02 closing-report | correctness | project-plan | open | | attested |
 | P-3 | arc03 analysis closed + composed | ptr: arc03 closing-report | correctness | project-plan | open | | attested |
 | P-4 | arc04 storage closed + composed | ptr: arc04 closing-report | correctness | project-plan | open | | attested |
@@ -98,6 +98,13 @@ closes (per-row walk) in the project `closing-report.md`._
 | P-11 | store is app-independent: corpus fully usable with the source apps absent | acceptance demo | serious | DoD | open | | reproduce at project scale |
 
 ## Version History
+
+### v1.2 — 2026-06-30
+arc01 discovery **proposed-closed** (pending independent gate): all three slices
+closed, `corpus-map.md` delivered, arc `closing-report.md` written with the
+composition check + project bubble-up. P-1 evidence populated (gate-pending). No
+roadmap change — arcs 02–06 hold; the discovery findings were absorbed into
+`design-doc.md` + `corpus-map.md`, not into new arcs.
 
 ### v1.1 — 2026-06-30
 Promoted the architecture to a design doc (`design-doc.md`) per the pre-authorized

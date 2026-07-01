@@ -40,12 +40,25 @@ arc scale, never inherited._
 |----|-----------|--------|--------------|--------|--------|----------|-------|
 | A-1 | slice01 (code-jsonl) closed cleanly | ptr: slice01 cdc-verification | correctness | arc-plan | done | slice01/cdc-verification.md — gated closed 2026-06-30 | attested |
 | A-2 | slice02 (desktop-export) closed cleanly | ptr: slice02 cdc-verification | correctness | arc-plan | done | slice02/cdc-verification.md — gated closed 2026-06-30 (all 10 rows reproduced) | attested |
-| A-3 | slice03 (corpus-map) closed cleanly | ptr: slice03 cdc-verification | correctness | arc-plan | open | | attested |
-| A-4 | corpus map documents BOTH sources' record schemas + content-block shapes | read map; cross-check against slice findings | serious | arc-plan | open | | reproduce at arc scale |
-| A-5 | every DoD provenance dimension (account/machine/model/time/project/session) traces to a concrete field in ≥1 source | walk each dimension → field in the map | serious | arc-plan | open | | reproduce at arc scale |
-| A-6 | arc02 normalized schema is draftable citing ONLY the corpus map (no re-spelunking) | demonstration: draft schema skeleton from map alone | serious | arc-plan | open | | reproduce at arc scale |
+| A-3 | slice03 (corpus-map) closed cleanly | ptr: slice03 closing-report | correctness | arc-plan | done | slice03 doer-closed (`slice03-corpus-map/closing-report.md`, 6/6); reproduced at arc gate | gated 2026-06-30 |
+| A-4 | corpus map documents BOTH sources' record schemas + content-block shapes | read map; cross-check against slice findings | serious | arc-plan | done | reproduced: `corpus-map.md` §2a/§2b vs slice01/02 findings (subagent gate PASS) | gated 2026-06-30 |
+| A-5 | every DoD provenance dimension (account/machine/config-root/model/time/project/session) traces to a concrete field in ≥1 source | walk each dimension → field in the map | serious | arc-plan | done | reproduced: `corpus-map.md` §3a mapping table (subagent gate PASS) | gated 2026-06-30 |
+| A-6 | arc02 normalized schema is draftable citing ONLY the corpus map (no re-spelunking) | demonstration: draft schema skeleton from map alone | serious | arc-plan | done | reproduced: `corpus-map.md` §3b NormalizedMessage skeleton (subagent gate PASS) | gated 2026-06-30 |
 
 ## Version History
+
+### v1.2 — 2026-06-30
+**arc01 CLOSED.** Independent gate PASS WITH NOTES (fresh-context subagent; the one
+actionable note — missing per-source volumes — fixed in `corpus-map.md` §1). Operator
+(Duncan) signed off. A-1…A-6 → done; project ledger P-1 → done; arc02 (classification)
+activated.
+
+### v1.1 — 2026-06-30
+slice02 + slice03 closed; arc **proposed-closed pending independent gate**. A-2 done
+(CC-verified); A-3 slice03 doer-closed; composition rows A-4/A-5/A-6 reproduced via
+`corpus-map.md` §2/§3a/§3b. Arc `closing-report.md` written (composition check +
+project bubble-up); 3/3 slices delivered, no silent drops, no arc-plan change. Gate
+requested of operator / fresh context.
 
 ### v1.0 — 2026-06-30
 Initial arc plan. Three slices (code-jsonl, desktop-export, corpus-map). Arc
