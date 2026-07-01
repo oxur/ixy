@@ -30,6 +30,13 @@ Cargo.lock
 *.db-wal
 /artifacts/
 
+# Raw corpus / personal exports — NEVER commit (see CLAUDE.md trust/hygiene boundary)
+/conversations.json
+/memories.json
+/users.json
+/projects/
+*ClaudeDesktop*Export*.zip
+
 # Coverage
 target/llvm-cov/
 *.profraw

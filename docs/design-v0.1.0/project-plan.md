@@ -39,14 +39,20 @@ heavy research/design. **Risk accepted:** if discovery (arc01) or analysis
 (arc03) surfaces architectural surprises, we promote a real design doc at that
 point rather than forcing them into this file.
 
-### Architecture note (inline, provisional)
+**Resolved 2026-06-30:** discovery (arc01) + the storage-substrate research pass
+made the architecture real (layering, storage model, concurrency, Dropbox/XDG
+placement, embedding pinning). A design doc was promoted as pre-authorized —
+`design-doc.md`. This note stands as the record of *why* the design doc arrived
+after the roadmap rather than before it.
 
-Pipeline: **acquire** (CC, trust domain) → **normalize** to a unified record
-model → **store** (durable local) → **index** (lexical/semantic/graph) →
-**query** (CLI). The unified record is the keystone; everything downstream keys
-off it. Candidate crates (to be confirmed by analysis, arc03): tantivy
-(lexical), lancedb (semantic/vector), petgraph (relations). Storage substrate
-TBD by arc03 (the analysis output decides volume/chunking, which decides store).
+### Architecture note → promoted to a design doc
+
+The architecture is now the design of record in **`design-doc.md`** (this file is
+the plan, not the design). In one line: **files are canonical; every index is
+derived and rebuildable** — a layered `ixy-core` + thin CLI/MCP adapters over a
+three-layer store (raw bedrock → normalized corpus → local-per-machine derived
+indices: tantivy / Lance / petgraph). See `design-doc.md` for the pieces, the
+concurrency model, the path placement, and the alternatives rejected.
 
 ## Arc roadmap (dependency order)
 
@@ -92,6 +98,14 @@ closes (per-row walk) in the project `closing-report.md`._
 | P-11 | store is app-independent: corpus fully usable with the source apps absent | acceptance demo | serious | DoD | open | | reproduce at project scale |
 
 ## Version History
+
+### v1.1 — 2026-06-30
+Promoted the architecture to a design doc (`design-doc.md`) per the pre-authorized
+deviation, after arc01 discovery + the storage research pass hardened the design.
+Replaced the provisional inline architecture note with a pointer; recorded the
+deviation as resolved. Roadmap + ledger unchanged (arc01 still active). Surfaced
+by: the storage-design conversation (Dropbox sync, odm reconciliation, concurrency,
+XDG placement).
 
 ### v1.0 — 2026-06-30
 Initial roadmap. Six arcs (discovery → classification → analysis → storage →

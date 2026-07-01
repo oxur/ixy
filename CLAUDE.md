@@ -23,6 +23,7 @@ Seats:
 Planning artifacts live under `docs/design-vX.Y.Z/`:
 
 - `project-plan.md` — roadmap + project ledger (DoD).
+- `design-doc.md` — architecture of record (the pieces + how they fit; SDLC step 3).
 - `arcNN-<slug>/arc-plan.md` — slice breakdown + arc ledger; `closing-report.md` at close.
 - `arcNN-<slug>/sliceNN-<slug>/` — open set `{slice-doc, ledger, cc-prompt}.md`;
   close set `{closing-report, cdc-verification}.md`.
