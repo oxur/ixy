@@ -45,3 +45,6 @@ target/llvm-cov/
 # OS
 .DS_Store
 Thumbs.db
+
+# Images
+*.afphoto
