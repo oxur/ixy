@@ -71,11 +71,9 @@ Per *plan late, plan deep*, only the active arc is detailed (see
 
 ## Current status
 
-- **Active:** arc01 — discovery, **proposed-closed pending independent gate**. All
-  three slices closed (slice01 CC-verified, slice02 CC-verified, slice03 doer-closed);
-  `arc01-discovery/corpus-map.md` delivered; arc `closing-report.md` written.
-- **Closed:** none yet (arc01 awaits its gate → then P-1 done, arc02 activates).
-- **Not yet planned in detail:** arc02–arc06.
+- **Active:** arc02 — classification (activated 2026-06-30; arc-plan written).
+- **Closed:** arc01 — discovery (independent gate PASS + operator sign-off, 2026-06-30).
+- **Not yet planned in detail:** arc03–arc06.
 
 ## Project ledger
 
@@ -85,7 +83,7 @@ closes (per-row walk) in the project `closing-report.md`._
 
 | ID | Criterion | Verify | Significance | Origin | Status | Evidence | Notes |
 |----|-----------|--------|--------------|--------|--------|----------|-------|
-| P-1 | arc01 discovery closed + composed | ptr: arc01 closing-report | correctness | project-plan | open | proposed: `arc01-discovery/closing-report.md`; composition A-4/5/6 reproduced (`corpus-map.md`); independent gate pending | → done at arc01 gate |
+| P-1 | arc01 discovery closed + composed | ptr: arc01 closing-report | correctness | project-plan | done | `arc01-discovery/closing-report.md` — CLOSED 2026-06-30 (independent subagent gate PASS + operator sign-off); composition A-4/5/6 reproduced (`corpus-map.md`) | attested (arc closing-report) |
 | P-2 | arc02 classification closed + composed | ptr: arc02 closing-report | correctness | project-plan | open | | attested |
 | P-3 | arc03 analysis closed + composed | ptr: arc03 closing-report | correctness | project-plan | open | | attested |
 | P-4 | arc04 storage closed + composed | ptr: arc04 closing-report | correctness | project-plan | open | | attested |
@@ -98,6 +96,11 @@ closes (per-row walk) in the project `closing-report.md`._
 | P-11 | store is app-independent: corpus fully usable with the source apps absent | acceptance demo | serious | DoD | open | | reproduce at project scale |
 
 ## Version History
+
+### v1.3 — 2026-06-30
+**arc01 CLOSED** (independent subagent gate PASS + operator sign-off); **P-1 → done**.
+**arc02 (classification) activated** and planned (`arc02-classification/arc-plan.md`).
+Roadmap unchanged.
 
 ### v1.2 — 2026-06-30
 arc01 discovery **proposed-closed** (pending independent gate): all three slices
